@@ -1,17 +1,18 @@
 const counterValue = document.querySelector("#value");
+const counterCounter = document.querySelector("#counter");
 let valueEl = Number(counterValue.textContent);
 const countText = () => {
-  counterValue.innerText = valueEl;
+  counterValue.textContent = valueEl;
 };
 
-const dekrBtn = document.querySelector("#counter").firstElementChild;
-const inkrBtn = document.querySelector("#counter").lastElementChild;
+const dekrBtn = counterCounter.firstElementChild;
+const inkrBtn = counterCounter.lastElementChild;
 
-inkrBtn.addEventListener("click", (event) => {
+inkrBtn.addEventListener("click", () => {
   valueEl += 1;
   countText();
 });
-dekrBtn.addEventListener("click", (event) => {
+dekrBtn.addEventListener("click", () => {
   valueEl -= 1;
   countText();
 });

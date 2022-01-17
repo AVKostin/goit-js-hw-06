@@ -1,8 +1,8 @@
 import images from "./data_images.js";
 
-const ulEl = document.querySelector(".gallery");
+const ulGalleryEl = document.querySelector(".gallery");
 
-Object.assign(ulEl.style, {
+Object.assign(ulGalleryEl.style, {
   width: "1000px",
   margin: "0 auto",
   display: "flex",
@@ -16,4 +16,4 @@ const image = images.reduce(
     (acc += `<li><img src='${url}', alt='${alt}' width = "300" height = "200"/></li>`),
   ""
 );
-ulEl.insertAdjacentHTML("beforeend", image);
+ulGalleryEl.insertAdjacentHTML("beforeend", image);

@@ -1,10 +1,11 @@
 let inputEl = document.querySelector("#name-input");
 let outputEl = document.querySelector("#name-output");
 
-const onInputChange = (event) => {
+const onInputChange = () => {
   inputEl = event.currentTarget.value;
-  inputEl === ""
-    ? (outputEl.innerText = "Незнакомец")
-    : (outputEl.innerText = inputEl.trim());
+  outputEl.innerText = inputEl.trim();
+  if (inputEl === "") {
+    outputEl.innerText = "Незнакомец";
+  }
 };
 inputEl.addEventListener("input", onInputChange);
