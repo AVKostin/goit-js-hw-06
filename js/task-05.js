@@ -1,11 +1,7 @@
 let inputEl = document.querySelector("#name-input");
 let outputEl = document.querySelector("#name-output");
+inputEl.addEventListener("input", onInput);
 
-const onInputChange = () => {
-  inputEl = event.currentTarget.value;
-  outputEl.innerText = inputEl.trim();
-  if (inputEl === "") {
-    outputEl.innerText = "Незнакомец";
-  }
-};
-inputEl.addEventListener("input", onInputChange);
+function onInput(e) {
+  outputEl.textContent = e.currentTarget.value || "Незнакомец";
+}
