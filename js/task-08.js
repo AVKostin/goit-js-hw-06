@@ -8,10 +8,13 @@ const handleSubmit = (e) => {
 
   if (email.value === "" || password.value === "") {
     return alert("Все поля должны быть заполнены!");
-    eventReset();
   }
+
   const DataEl = { mail: email.value, password: password.value };
+
+  formRef.reset();
 
   console.log(DataEl);
 };
+
 formRef.addEventListener("submit", handleSubmit);
