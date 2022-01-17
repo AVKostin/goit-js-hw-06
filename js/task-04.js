@@ -5,14 +5,14 @@ const countText = () => {
   counterValue.textContent = valueEl;
 };
 
-const dekrBtn = counterCounter.firstElementChild;
-const inkrBtn = counterCounter.lastElementChild;
+const decrBtn = decrCounter.firstElementChild;
+const incrBtn = incrCounter.lastElementChild;
 
-inkrBtn.addEventListener("click", () => {
+incrBtn.addEventListener("click", () => {
   valueEl += 1;
   countText();
 });
-dekrBtn.addEventListener("click", () => {
+decrBtn.addEventListener("click", () => {
   valueEl -= 1;
   countText();
 });

@@ -10,11 +10,11 @@ const handleSubmit = (e) => {
     return alert("Все поля должны быть заполнены!");
   }
 
-  const DataEl = { mail: email.value, password: password.value };
+  const dataEl = { mail: email.value, password: password.value };
 
   formRef.reset();
 
-  console.log(DataEl);
+  console.log(dataEl);
 };
 
 formRef.addEventListener("submit", handleSubmit);
