@@ -5,7 +5,7 @@ const getRandomHexColor = () =>
   `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
 const backgroundBodyColor = () => {
-  const curColor = `${getRandomHexColor()}`;
+  const curColor = getRandomHexColor();
   document.body.style.backgroundColor = curColor;
   spanRef.textContent = curColor;
 };
