@@ -14,6 +14,27 @@
             <span id="value">0</span>
             <button type="button" data-action="increment">+1</button>
         </div>
-        <script src="../js/task-04.js" type="module"></script>
+
+        <!-- <script src="../js/task-04.js" type="module"></script> -->
+        <script>
+            const counterValue = document.querySelector("#value");
+const counterCounter = document.querySelector("#counter");
+let valueEl = Number(counterValue.textContent);
+const countText = () => {
+  counterValue.textContent = valueEl;
+};
+
+const decrBtn = decrCounter.firstElementChild;
+const incrBtn = incrCounter.lastElementChild;
+
+incrBtn.addEventListener("click", () => {
+  valueEl += 1;
+  countText();
+});
+decrBtn.addEventListener("click", () => {
+  valueEl -= 1;
+  countText();
+});
+        </script>
     </body>
 </html>
